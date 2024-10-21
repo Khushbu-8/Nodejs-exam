@@ -17,6 +17,6 @@ routes.post(
   passport.authenticate("local", { failureRedirect: "/register" }),
   loginUser
 );
-routes.get("/dashboard", dashboard);
+routes.get("/dashboard",passport.checkUser, dashboard);
 
 module.exports = routes;
