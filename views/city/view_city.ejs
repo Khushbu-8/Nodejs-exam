@@ -42,9 +42,9 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">City</th>
-                        <th scope="col">State</th>
                         <th scope="col">Country</th>
+                        <th scope="col">State</th>
+                        <th scope="col">City</th>
                         <th scope="col">Status</th>
                         <th>Action</th>
                       </tr>
@@ -53,9 +53,9 @@
                       <% city.map((val,i)=>{ %>
                       <tr>
                         <td><%= ++i %></td>
-                        <td><%= val.city %></td>
+                        <td><%= val.countryId.country %></td>
                         <td><%= val.stateId.state %></td>
-                        <td><%= val.countryId %></td>
+                        <td><%= val.city %></td>
                         <td>
                           <button class="btn btn-success">
                             <%= val.status %>

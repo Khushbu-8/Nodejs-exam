@@ -25,7 +25,8 @@
             <div class="col-sm-9">
               <select name="country" id="" class="form-control" value="">
                 <% country.map((c,i)=>{ %>
-                <option value="<%= c._id %>"><%= c.country %></option>
+                <option  <% if(c.country == single.countryId.country) { %> 
+                  selected  <% } %>  value="<%= c._id %>"><%= c.country %></option>
                 <% }) %>
               </select>
             </div>
@@ -34,12 +35,12 @@
             <label
               for="fname"
               class="col-sm-3 text-end control-label col-form-label"
-              >Sub Category</label
+              >State</label
             >
             <div class="col-sm-9">
-              <select name="subcategory" id="" class="form-control" value="">
-                <% subcat.map((sc,i)=>{ %>
-                <option value="<%= sc._id %>"><%= sc.subcategory %></option>
+              <select name="state" id="" class="form-control" value="">
+                <% state.map((sc,i)=>{ %>
+                <option  value="<%= sc._id %>"><%= sc.state %></option>
                 <% }) %>
               </select>
             </div>
@@ -48,9 +49,8 @@
             <label
               for="fname"
               class="col-sm-3 text-end control-label col-form-label"
-              >Extra sub Category</label
+              >city</label
             >
-
             <div class="col-sm-9">
               <input
                 type="text"
@@ -66,7 +66,7 @@
         <div class="border-top">
           <div class="card-body">
             <button type="submit" class="btn btn-primary">Submit</button>
-            <a href="/category" class="btn btn-info">View</a>
+            <a href="/city" class="btn btn-info">View</a>
           </div>
         </div>
       </form>

@@ -73,8 +73,8 @@ const cityEditPage = async (req, res) => {
     const single = await cityModel
       .findById(id)
       .populate("countryId")
-      .populate("subcountryId")
-      .populate("cityId");
+      .populate("stateId")
+      
 
     console.log(single, "s");
 
